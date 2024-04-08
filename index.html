@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="weather card">
+      <form onsubmit="getData(); return false;">
+        <div id="search-div"><input id="search-bar" type="text" placeholder="Your Location" /><div id="wrong-city">Not a city</div></div>
+        <button id="search-btn" onclick="getData()" type="button">
+          <img id="search-icon" src="./assets/images/search.png" alt="search" />
+        </button>
+      </form>
+      <img id="refrence" src="./assets/images/clear.png" alt="refrence" />
+      <h1 id="temp">20&deg;c</h1>
+      <h2 id="location">Location</h2>
+      <section id="more-info">
+        <div>
+          <img class="info-img" src="./assets/images/humidity.png" alt="humidity" />
+          <label class="more-data"id="humidity">53%</label>
+          <h3>Humidity</h3>
+        </div>
+        <div>
+          <img class="info-img" src="./assets/images/wind.png" alt="wind speed" />
+          <span class="more-data"id="wind">5.6 km/h</span>
+          <h3>Wind Speed</h3>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
